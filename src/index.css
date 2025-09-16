@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap&subset=vietnamese");
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Roboto", "Arial", "Tahoma", "Verdana", "Segoe UI",
+      -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    background-color: #ffffff;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Merriweather", "Times New Roman", "Georgia", "Times", serif;
+    line-height: 1.2;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    font-family: inherit;
+  }
+
+  /* Đảm bảo font chữ tiếng Việt hiển thị đúng */
+  .vietnamese-text {
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga" 1, "kern" 1;
+    -moz-font-feature-settings: "liga" 1, "kern" 1;
+  }
+
+  /* Cải thiện hiển thị cho các ký tự có dấu */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div {
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: normal;
+    font-kerning: normal;
+  }
+
+  /* Đảm bảo font chữ tiếng Việt hiển thị đúng trên tất cả trình duyệt */
+  html {
+    font-display: swap;
+  }
+
+  /* Fallback cho trường hợp font không tải được */
+  @font-face {
+    font-family: "Vietnamese Fallback";
+    src: local("Arial"), local("Tahoma"), local("Verdana");
+    unicode-range: U+0102-0103, U+1EA0-1EF9, U+00C0-00C3, U+00C8-00CA,
+      U+00CC-00CD, U+00D2-00D5, U+00D9-00DA, U+00DD, U+00E0-00E3, U+00E8-00EA,
+      U+00EC-00ED, U+00F2-00F5, U+00F9-00FA, U+00FD;
+  }
+
+  /* Đảm bảo font chữ tiếng Việt hiển thị đúng */
+  .vietnamese-text,
+  .vietnamese-text * {
+    font-family: "Roboto", "Arial", "Tahoma", "Verdana", sans-serif !important;
+    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+    -moz-font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+  }
+
+  /* Áp dụng font chữ tiếng Việt cho toàn bộ trang */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  a,
+  button {
+    font-family: "Roboto", "Arial", "Tahoma", "Verdana", "Segoe UI", sans-serif !important;
+  }
+
+  /* Đặc biệt cho các tiêu đề */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Merriweather", "Times New Roman", "Georgia", "Times", serif !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-4 bg-gradient-to-br from-[#DA020E] to-[#B8001F] text-white font-semibold rounded-xl transform hover:-translate-y-1 transition-all duration-300 relative overflow-hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary::before {
+    content: "";
+    @apply absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500;
+  }
+
+  .btn-primary:hover::before {
+    @apply left-full;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-8 py-4 bg-white text-[#DA020E] border-2 border-[#DA020E] font-semibold rounded-xl hover:bg-[#DA020E] hover:text-white transform hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .content-card {
+    @apply bg-gradient-to-br from-white to-[#FFF8DC] p-8 rounded-xl border-l-4 border-[#DA020E] transform hover:-translate-y-2 transition-all duration-300;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif font-bold text-[#DA020E] mb-4 relative text-center;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-50 h-1 bg-gradient-to-r from-[#FFD700] to-[#FFEB3B] rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#FFD700] to-[#FFEB3B] bg-clip-text text-transparent;
+  }
+
+  .hero-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.1'%3E%3Cpolygon points='30,10 20,50 40,50'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Text shadow utilities cho Hero section */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .text-shadow-xl {
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Image optimization cho Overview section */
+  .overview-image {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+  }
+
+  .overview-image:hover {
+    transform: scale(1.02);
+  }
+
+  /* Full size image container */
+  .overview-image-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Responsive image sizing - Landscape orientation */
+  @media (max-width: 768px) {
+    .overview-image {
+      aspect-ratio: 16/9;
+      min-height: 300px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .overview-image {
+      aspect-ratio: 4/3;
+      min-height: 400px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .overview-image {
+      aspect-ratio: 3/2;
+      min-height: 500px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .overview-image {
+      aspect-ratio: 16/10;
+      min-height: 600px;
+    }
+  }
+
+  /* Thoughts section image styling */
+  .thoughts-image {
+    transition: transform 0.3s ease;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  .thoughts-image:hover {
+    transform: scale(1.02);
+  }
+
+  /* Responsive image sizing for thoughts */
+  @media (max-width: 768px) {
+    .thoughts-image {
+      max-height: 300px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .thoughts-image {
+      max-height: 350px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .thoughts-image {
+      max-height: 400px;
+    }
+  }
+}
