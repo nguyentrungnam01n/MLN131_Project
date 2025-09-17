@@ -143,13 +143,13 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button
+      {/* <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-primary-red hover:bg-primary-gold text-white rounded-full flex items-center justify-center shadow-soft hover:shadow-soft-hover transition-all duration-300 hover:-translate-y-1 z-50"
         aria-label="Back to top"
       >
         <FaArrowUp />
-      </button>
+      </button> */}
     </footer>
   );
 };

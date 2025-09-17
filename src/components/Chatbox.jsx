@@ -5,14 +5,31 @@ import { Input } from "@/components/ui/input"
 import { MessageCircle, X, Send, Bot, User, Minimize2, Trash2 } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-import useChatApi from "@/hooks/useChatApi"   
+import useChatApi from '../hooks/useChatApi' 
 
 const quickReplies = [
-  { id: "skin-analysis", text: "Phân tích da", message: "Tôi muốn được phân tích tình trạng da" },
-  { id: "product-recommendations", text: "Gợi ý sản phẩm", message: "Bạn có thể gợi ý sản phẩm mỹ phẩm phù hợp với loại da của tôi không?" },
-  { id: "skincare-routine", text: "Quy trình chăm sóc", message: "Tôi cần tư vấn về quy trình chăm sóc da hàng ngày phù hợp" },
-  { id: "ingredient-advice", text: "Tư vấn thành phần", message: "Bạn có thể giải thích về các thành phần trong mỹ phẩm không?" },
+  { 
+    id: "1", 
+    text: "Đặc điểm công nhân", 
+    message: "Giai cấp công nhân Việt Nam mang những đặc điểm gì đặc biệt?" 
+  },
+  { 
+    id: "2", 
+    text: "Sứ mệnh lịch sử", 
+    message: "Sứ mệnh lịch sử của giai cấp công nhân Việt Nam trong thời kỳ hiện nay là gì?" 
+  },
+  { 
+    id: "3", 
+    text: "Thi đua yêu nước", 
+    message: "Phong trào Thi đua yêu nước của giai cấp công nhân có vai trò như thế nào?" 
+  },
+  { 
+    id: "4", 
+    text: "Hồ Chí Minh và công nhân", 
+    message: "Chủ tịch Hồ Chí Minh đã có những đóng góp gì cho phong trào công nhân?" 
+  }
 ]
+
 
 export default function Chatbox() {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,7 +49,7 @@ export default function Chatbox() {
     const welcome = {
       id: "welcome",
       content:
-        "Xin chào! 👋 Tôi là Chatbot chăm sóc da. Tôi có thể giúp bạn:\n\n• Phân tích tình trạng da\n• Gợi ý sản phẩm phù hợp\n• Tư vấn routine hằng ngày\n• Giải đáp thành phần\n\nBạn cần hỗ trợ gì hôm nay? 😊",
+        "Xin chào! 👋 Tôi là AI History Chatbot. Tôi có thể giúp bạn tìm hiểu về giai cấp công nhân Việt Nam và phong trào Thi đua yêu nước của Chủ tịch Hồ Chí Minh. \n\nHãy để tôi biết bạn cần trợ giúp gì nhé!",
       role: "assistant",
       timestamp: new Date(),
     }
@@ -86,7 +103,7 @@ export default function Chatbox() {
         <div className="fixed bottom-6 right-6 z-50">
           <Button
             onClick={() => setIsOpen(true)}
-            className="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg animate-bounce"
+            className="w-14 h-14 rounded-full bg-[#CB0118] text-white shadow-lg animate-bounce cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300 relative flex items-center justify-center"
           >
             <MessageCircle className="w-6 h-6" />
           </Button>
@@ -105,14 +122,14 @@ export default function Chatbox() {
         <div className="fixed bottom-6 right-6 z-50 w-80 md:w-96">
           <Card className="shadow-2xl border-0 overflow-hidden">
             {/* Header */}
-            <CardHeader className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4">
+            <CardHeader className="bg-[#CB0118] text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                     <Bot className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sm">AI Skincare Expert</h3>
+                    <h3 className="font-semibold text-sm">AI History Expert</h3>
                     <p className="text-xs opacity-80">Đang hoạt động</p>
                   </div>
                 </div>
@@ -139,7 +156,7 @@ export default function Chatbox() {
                       <div
                         className={`max-w-[85%] rounded-lg p-3 ${
                           msg.role === "user"
-                            ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                            ? "bg-[#CB0118] text-white"
                             : "bg-white border border-gray-200 text-gray-800 shadow-sm"
                         }`}
                       >
@@ -165,9 +182,9 @@ export default function Chatbox() {
                         <div className="flex items-center space-x-2">
                           <Bot className="w-4 h-4 text-purple-500" />
                           <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />
-                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />
+                            <div className="w-2 h-2 bg-[#CB0118] rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-[#CB0118] rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />
+                            <div className="w-2 h-2 bg-[#CB0118] rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />
                           </div>
                           <span className="text-xs text-gray-500">AI đang soạn tin...</span>
                         </div>
@@ -185,7 +202,7 @@ export default function Chatbox() {
                             variant="outline"
                             size="sm"
                             onClick={() => handleQuickReply(qr.message)}
-                            className="text-xs h-auto py-2 px-3 border-purple-200 text-purple-600 hover:bg-purple-50"
+                            className="text-xs h-auto py-2 px-3 border-[#CB0118] text-[#CB0118] hover:bg-[#D3283C] hover:text-white"
                           >
                             {qr.text}
                           </Button>
@@ -210,7 +227,7 @@ export default function Chatbox() {
                     <Button
                       onClick={() => handleSendMessage()}
                       disabled={!inputMessage.trim()}
-                      className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3"
+                      className="bg-[#CB0118] text-white px-3"
                     >
                       <Send className="w-4 h-4" />
                     </Button>

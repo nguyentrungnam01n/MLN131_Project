@@ -6,6 +6,7 @@ import Thoughts from "./sections/Thoughts.jsx";
 import Analysis from "./sections/Analysis.jsx";
 import Timeline from "./sections/Timeline.jsx";
 import Footer from "./components/Footer.jsx";
+import Chatbox from "@/components/Chatbox.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Thoughts />
         <Analysis />
         <Timeline />
+        <Chatbox />
       </main>
       <Footer />
     </div>
