@@ -23,32 +23,32 @@ export const thoughtContent = {
           quote:
             "Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc",
           content:
-            'Giai cấp công nhân Việt Nam hình thành vào đầu thế kỷ XX trong cuộc khai thác thuộc địa của thực dân Pháp, là lực lượng trực tiếp đối kháng với tư bản thực dân. (GT trang 39)',
+            'Giai cấp công nhân Việt Nam hình thành vào đầu thế kỷ XX trong cuộc khai thác thuộc địa của thực dân Pháp, là lực lượng trực tiếp đối kháng với tư bản thực dân.',
         },
         {
           title: "Tinh thần cách mạng và lòng yêu nước sâu sắc",
           icon: "hammer-sickle",
           content:
-            "Do bị áp bức bởi cả chủ nghĩa đế quốc và phong kiến, giai cấp công nhân sớm thể hiện mình là lực lượng chính trị tiên phong, có tinh thần cách mạng triệt để, gắn bó mật thiết với lợi ích dân tộc. (GT trang 39)",
+            "Do bị áp bức bởi cả chủ nghĩa đế quốc và phong kiến, giai cấp công nhân sớm thể hiện mình là lực lượng chính trị tiên phong, có tinh thần cách mạng triệt để, gắn bó mật thiết với lợi ích dân tộc.",
         },
         {
           title: "Liên minh tự nhiên với nông dân",
           icon: "route",
           content:
-            "Đại bộ phận công nhân xuất thân từ nông dân và các tầng lớp lao động khác, tạo ra mối liên hệ chặt chẽ và cơ sở thuận lợi để xây dựng khối liên minh công - nông - trí thức. (GT trang 39)",
+            "Đại bộ phận công nhân xuất thân từ nông dân và các tầng lớp lao động khác, tạo ra mối liên hệ chặt chẽ và cơ sở thuận lợi để xây dựng khối liên minh công - nông - trí thức.",
         },
         {
           title: "Phát triển nhanh chóng về ý thức chính trị",
           icon: "bullseye",
           content:
-            "Dù số lượng ban đầu còn ít và chưa phải là sản phẩm thuần túy của đại công nghiệp, giai cấp công nhân Việt Nam đã nhanh chóng trưởng thành về ý thức chính trị, đặc biệt là từ khi Đảng Cộng sản ra đời. (GT trang 39)",
+            "Dù số lượng ban đầu còn ít và chưa phải là sản phẩm thuần túy của đại công nghiệp, giai cấp công nhân Việt Nam đã nhanh chóng trưởng thành về ý thức chính trị, đặc biệt là từ khi Đảng Cộng sản ra đời.",
         },
         {
           title: "Những biến đổi trong thời kỳ đổi mới",
           icon: "bullseye",
           content:
-            "Hiện nay, giai cấp công nhân Việt Nam đã tăng nhanh về số lượng và chất lượng, đa dạng về cơ cấu nghề nghiệp, và ngày càng được trí thức hóa, đóng vai trò đi đầu trong sự nghiệp công nghiệp hóa, hiện đại hóa. (GT trang 40)",
-        },
+            "Hiện nay, giai cấp công nhân Việt Nam đã tăng nhanh về số lượng và chất lượng, đa dạng về cơ cấu nghề nghiệp, và ngày càng được trí thức hóa, đóng vai trò đi đầu trong sự nghiệp công nghiệp hóa, hiện đại hóa.",
+        }
       ],
     },
     //Comment in here
@@ -71,21 +71,21 @@ export const thoughtContent = {
           icon: "balance-scale",
           // 
           content:
-            "Giai cấp công nhân là nguồn nhân lực chủ yếu tham gia phát triển nền kinh tế thị trường định hướng xã hội chủ nghĩa, lấy khoa học - công nghệ làm động lực để tăng năng suất và hiệu quả. Quá trình này không chỉ phát triển kinh tế mà còn tạo điều kiện để giai cấp công nhân trưởng thành, khắc phục các hạn chế do nguồn gốc xã hội và lịch sử để lại, đồng thời củng cố khối liên minh công - nông - trí thức. (GT trang 41,42)"
+            "Giai cấp công nhân là nguồn nhân lực chủ yếu tham gia phát triển nền kinh tế thị trường định hướng xã hội chủ nghĩa, lấy khoa học - công nghệ làm động lực để tăng năng suất và hiệu quả. Quá trình này không chỉ phát triển kinh tế mà còn tạo điều kiện để giai cấp công nhân trưởng thành, khắc phục các hạn chế do nguồn gốc xã hội và lịch sử để lại, đồng thời củng cố khối liên minh công - nông - trí thức."
         },
         {
           title: "Nội dung Chính trị - Xã hội",
           icon: "gavel",
           quote: "Giữ vững và tăng cường sự lãnh đạo của Đảng Cộng sản Việt Nam đối với giai cấp công nhân và các tầng lớp nhân dân.",
           content:
-            "Giữ vững bản chất giai cấp công nhân của Đảng, xây dựng Đảng trong sạch, vững mạnh, ngăn chặn sự suy thoái về tư tưởng chính trị, đạo đức, lối sống. Giai cấp công nhân có trọng trách bảo vệ Đảng, bảo vệ chế độ xã hội chủ nghĩa và bảo vệ nhân dân. (GT trang 42)",
+            "Giữ vững bản chất giai cấp công nhân của Đảng, xây dựng Đảng trong sạch, vững mạnh, ngăn chặn sự suy thoái về tư tưởng chính trị, đạo đức, lối sống. Giai cấp công nhân có trọng trách bảo vệ Đảng, bảo vệ chế độ xã hội chủ nghĩa và bảo vệ nhân dân.",
         },
         {
           title: "Nội dung Văn hóa - Tư tưởng",
           icon: "gavel",
           quote: "Xây dựng và phát triển nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc dân tộc.",
           content:
-            "Cốt lõi là xây dựng con người mới xã hội chủ nghĩa. Đồng thời, giai cấp công nhân phải đi đầu trong cuộc đấu tranh trên lĩnh vực tư tưởng, bảo vệ nền tảng của Đảng là chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh, chống lại các quan điểm sai trái, thù địch. (GT trang 42,43)",
+            "Cốt lõi là xây dựng con người mới xã hội chủ nghĩa. Đồng thời, giai cấp công nhân phải đi đầu trong cuộc đấu tranh trên lĩnh vực tư tưởng, bảo vệ nền tảng của Đảng là chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh, chống lại các quan điểm sai trái, thù địch.",
         },
       ],
     },
@@ -123,27 +123,27 @@ export const thoughtContent = {
             {
               title: "Nâng cao nhận thức",
               description:
-                "Kiên định quan điểm giai cấp công nhân là giai cấp lãnh đạo cách mạng thông qua Đảng Cộng sản Việt Nam. (GT trang 44)",
+                "Kiên định quan điểm giai cấp công nhân là giai cấp lãnh đạo cách mạng thông qua Đảng Cộng sản Việt Nam.",
             },
             {
               title: "Xây dựng khối liên minh",
               description:
-                "Gắn việc xây dựng giai cấp công nhân với việc củng cố và phát huy sức mạnh của khối liên minh công - nông - trí thức và đại đoàn kết toàn dân tộc. (GT trang 44)",
+                "Gắn việc xây dựng giai cấp công nhân với việc củng cố và phát huy sức mạnh của khối liên minh công - nông - trí thức và đại đoàn kết toàn dân tộc.",
             },
             {
               title: "Gắn với chiến lược phát triển KT-XH",
               description:
-                "Kết hợp chặt chẽ chiến lược xây dựng giai cấp công nhân với chiến lược công nghiệp hóa, hiện đại hóa và hội nhập quốc tế của đất nước. (GT trang 45)",
+                "Kết hợp chặt chẽ chiến lược xây dựng giai cấp công nhân với chiến lược công nghiệp hóa, hiện đại hóa và hội nhập quốc tế của đất nước.",
             },
             {
               title: "Đào tạo và bồi dưỡng",
               description:
-                "Không ngừng trí thức hóa giai cấp công nhân, đặc biệt quan tâm xây dựng thế hệ công nhân trẻ có học vấn, kỹ năng cao, và bản lĩnh chính trị vững vàng. (GT trang 45)",
+                "Không ngừng trí thức hóa giai cấp công nhân, đặc biệt quan tâm xây dựng thế hệ công nhân trẻ có học vấn, kỹ năng cao, và bản lĩnh chính trị vững vàng.",
             },
             {
               title: "Phát huy vai trò của cả hệ thống chính trị",
               description:
-                "Xây dựng giai cấp công nhân là trách nhiệm chung của Đảng, Nhà nước, toàn xã hội, các tổ chức (đặc biệt là Công đoàn) và nỗ lực của chính mỗi người công nhân. (GT trang 45)",
+                "Xây dựng giai cấp công nhân là trách nhiệm chung của Đảng, Nhà nước, toàn xã hội, các tổ chức (đặc biệt là Công đoàn) và nỗ lực của chính mỗi người công nhân.",
             },
           ],  
         },
@@ -203,13 +203,13 @@ export const analysisContent = {
 
 export const documentData = [
   {
-    source: "https://bitly.li/gbzb",
+    //source: "https://bitly.li/gbzb",
     title: "Nghị quyết số 20-NQ/TW (Khóa X)",
     description:
       "Đây là nghị quyết mang tính chiến lược, xác định rõ sứ mệnh lịch sử của giai cấp công nhân là \"lực lượng đi đầu trong sự nghiệp công nghiệp hóa, hiện đại hóa đất nước\". Nghị quyết đề ra 5 nhóm nhiệm vụ và giải pháp lớn, trong đó nhấn mạnh việc \"trí thức hóa giai cấp công nhân\", nâng cao trình độ học vấn, tay nghề, và bản lĩnh chính trị, đồng thời chăm lo đời sống vật chất, tinh thần cho người lao động.",
   },
   {
-    source: "Các văn bản chỉ đạo của Đảng được đăng tải trên các trang báo chính thống như Báo Nhân Dân, Tạp chí Cộng sản.",
+    //source: "Các văn bản chỉ đạo của Đảng được đăng tải trên các trang báo chính thống như Báo Nhân Dân, Tạp chí Cộng sản.",
     title: "Kết luận của Bộ Chính trị về tiếp tục thực hiện Nghị quyết số 20-NQ/TW",
     description:
       " Các kết luận sau này tiếp tục khẳng định giá trị của Nghị quyết 20 và đề ra các giải pháp bổ sung để giải quyết những thách thức mới, như tác động của cuộc Cách mạng công nghiệp lần thứ tư, vấn đề nhà ở, an sinh xã hội cho công nhân tại các khu công nghiệp.",

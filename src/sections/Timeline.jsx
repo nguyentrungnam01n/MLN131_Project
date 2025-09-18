@@ -13,8 +13,8 @@ const TimelineItem = ({ item, index }) => {
   return (
     <div 
       ref={ref}
-      className={`relative mb-16 w-full md:w-5/12 transition-all duration-800 ${
-        isEven ? 'md:mr-auto md:text-right' : 'md:ml-auto md:text-left'
+      className={`relative mb-16 w-full transition-all duration-800 ${
+        isEven ? 'md:mr-auto' : 'md:ml-auto'
       } ${inView ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}
       style={{ animationDelay: `${index * 200}ms` }}
     >

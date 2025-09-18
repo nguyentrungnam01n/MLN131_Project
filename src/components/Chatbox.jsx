@@ -39,7 +39,7 @@ export default function Chatbox() {
   const [showQuickReplies, setShowQuickReplies] = useState(true)
   const [unreadCount, setUnreadCount] = useState(1)
 
-  const { sendMessage, isTyping } = useChatApi() // ✅ dùng hook
+  const { sendMessage, isTyping } = useChatApi() 
 
   const messagesEndRef = useRef(null)
   const fileInputRef = useRef(null)
