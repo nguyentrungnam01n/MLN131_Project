@@ -7,7 +7,8 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhone,
-  FaArrowUp
+  FaArrowUp,
+  FaTiktok
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -26,35 +27,35 @@ const Footer = () => {
               Tiếng nói của công nhân: Sứ mệnh và khát vọng
             </h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Nơi lưu trữ và truyền bá tư tưởng vĩ đại của Chủ tịch Hồ Chí Minh 
-              cho thế hệ hôm nay và mai sau. Khám phá hành trình cách mạng và 
-              những giá trị thiêng liêng của dân tộc Việt Nam.
+              Giai cấp công nhân Việt Nam, với tinh thần cách mạng sâu sắc, đã phát triển mạnh mẽ trong thời kỳ đổi mới, đóng vai trò quan trọng trong công nghiệp hóa, hiện đại hóa đất nước. 
+              Sứ mệnh của họ là phát triển kinh tế, bảo vệ Đảng và chế độ xã hội chủ nghĩa, đồng thời xây dựng nền văn hóa xã hội chủ nghĩa. 
+              Đảng Cộng sản Việt Nam đề ra các giải pháp như trí thức hóa công nhân, nâng cao đời sống cho người lao động.
             </p>
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=61580547878635" 
                 className="w-10 h-10 bg-primary-red hover:bg-primary-gold rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
-              <a 
+              {/* <a 
                 href="#" 
                 className="w-10 h-10 bg-primary-red hover:bg-primary-gold rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                 aria-label="YouTube"
               >
                 <FaYoutube />
-              </a>
-              <a 
+              </a> */}
+              {/* <a 
                 href="#" 
                 className="w-10 h-10 bg-primary-red hover:bg-primary-gold rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                 aria-label="Twitter"
               >
-                <FaTwitter />
-              </a>
+                <FaTiktok />
+              </a> */}
               <a 
-                href="#" 
+                href="https://www.instagram.com/triethocmaclenin_" 
                 className="w-10 h-10 bg-primary-red hover:bg-primary-gold rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                 aria-label="Instagram"
               >
@@ -72,9 +73,9 @@ const Footer = () => {
               {[
                 { label: 'Trang chủ', href: '#home' },
                 { label: 'Tổng quan', href: '#overview' },
-                { label: 'Tư tưởng', href: '#thoughts' },
+                { label: 'Nội dung', href: '#thoughts' },
                 { label: 'Phân tích', href: '#analysis' },
-                { label: 'Cuộc đời', href: '#timeline' }
+                { label: 'Nghị quyết', href: '#timeline' }
               ].map((link, index) => (
                 <li key={index}>
                   <button
@@ -103,11 +104,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <FaEnvelope className="text-primary-gold flex-shrink-0" />
-                <span>info@hochiminh-museum.vn</span>
+                <span>nguyentrungnam01n@gmail.com.vn</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <FaPhone className="text-primary-gold flex-shrink-0" />
-                <span>(+84) 123 456 789</span>
+                <span>(+84) 944 056 171</span>
               </div>
             </div>
 

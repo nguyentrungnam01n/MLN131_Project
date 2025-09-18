@@ -11,9 +11,8 @@ const StatItem = ({ stat, index }) => {
   return (
     <div
       ref={ref}
-      className={`text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-hover transition-all duration-500 ${
-        inView ? "animate-fade-in-up opacity-100" : "opacity-0"
-      }`}
+      className={`text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-hover transition-all duration-500 ${inView ? "animate-fade-in-up opacity-100" : "opacity-0"
+        }`}
       style={{ animationDelay: `${index * 200}ms` }}
     >
       <h4 className="text-5xl font-serif font-bold text-primary-red mb-2">
@@ -46,9 +45,8 @@ const Overview = () => {
         {/* Section Header */}
         <div
           ref={titleRef}
-          className={`text-center mb-16 transition-all duration-800 ${
-            titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-          }`}
+          className={`text-center mb-16 transition-all duration-800 ${titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+            }`}
         >
           <h2 className="section-title">Tổng Quan</h2>
           <p className="text-xl text-neutral-medium-gray max-w-2xl mx-auto">
@@ -61,9 +59,8 @@ const Overview = () => {
           {/* Text Content */}
           <div
             ref={contentRef}
-            className={`mb-12 transition-all duration-800 ${
-              contentInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-            }`}
+            className={`mb-12 transition-all duration-800 ${contentInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+              }`}
           >
             <h3 className="text-3xl font-serif font-bold text-primary-red mb-6 text-center">
               {thoughtContent.overview.title}
@@ -74,12 +71,25 @@ const Overview = () => {
             </p>
           </div>
 
+          {/* YouTube Video iframe */}
+          <div className="mb-12 text-center">
+            <iframe
+              width="854"
+              height="480"
+              src="https://www.youtube.com/embed/-hr-F2GxvLs"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="mx-auto rounded-xl"
+            ></iframe>
+          </div>
+          
           {/* Image - Full Width */}
           <div
             ref={imageRef}
-            className={`transition-all duration-800 overview-image-container ${
-              imageInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-            }`}
+            className={`transition-all duration-800 overview-image-container ${imageInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+              }`}
           >
             <div className="relative rounded-xl overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-500 group w-full max-w-6xl mx-auto">
               <div className="overview-image relative w-full">
@@ -88,29 +98,17 @@ const Overview = () => {
                   alt="Chủ tịch Hồ Chí Minh"
                   className="w-full h-full object-cover object-center"
                 />
-                {/* Overlay để tăng độ tương phản */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-
-                {/* Caption overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
                   <p className="text-white font-medium text-lg text-center">
                     Chủ tịch Hồ Chí Minh
                   </p>
                 </div>
               </div>
-
-              {/* Hover effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
         </div>
-
-        {/* Statistics */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {thoughtContent.overview.stats.map((stat, index) => (
-            <StatItem key={index} stat={stat} index={index} />
-          ))}
-        </div> */}
       </div>
     </section>
   );

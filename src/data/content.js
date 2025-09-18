@@ -15,7 +15,7 @@ export const thoughtContent = {
       id: "independence-socialism",
       title: "Đặc điểm của Giai cấp Công nhân Việt Nam",
       icon: "flag",
-      image: "/Doclapdantoc.jpg",
+      image: "/giaicapcongnhan.jpg",
       sections: [
         {
           title: "Ra đời trước giai cấp tư sản",
@@ -183,7 +183,7 @@ export const analysisContent = {
   heroCreatesTimes: {
     title: "Bài viết trên Báo điện tử Chính phủ",
     subtitle:
-      "Xây dựng giai cấp công nhân lớn mạnh: Nhiệm vụ quan trọng và cấp bách",
+      "Nhiệm vụ quan trọng và cấp bách cho giai cấp công nhân VN",
     achievements: [
       {
         icon: "lightbulb",
