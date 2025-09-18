@@ -20,13 +20,13 @@ const quickReplies = [
   },
   { 
     id: "3", 
-    text: "Thi đua yêu nước", 
-    message: "Phong trào Thi đua yêu nước của giai cấp công nhân có vai trò như thế nào?" 
+    text: "Vai trò trong công nghiệp hóa", 
+    message: "Giai cấp công nhân có vai trò gì trong sự nghiệp công nghiệp hóa, hiện đại hóa đất nước?" 
   },
   { 
     id: "4", 
-    text: "Hồ Chí Minh và công nhân", 
-    message: "Chủ tịch Hồ Chí Minh đã có những đóng góp gì cho phong trào công nhân?" 
+    text: "Tác động của KT thị trường", 
+    message: "Sự tác động của kinh tế thị trường đối với ý thức chính trị và vai trò của giai cấp công nhân là gì?" 
   }
 ]
 
