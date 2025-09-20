@@ -44,39 +44,59 @@ const ThoughtCard = ({ thought, index }) => {
     <div
       ref={ref}
       id={thought.id}
-      className={`content-card mb-12 transition-all duration-800 ${inView ? "animate-fade-in-up opacity-100" : "opacity-0"
-        }`}
+      className={`content-card mb-12 transition-all duration-800 ${
+        inView ? "animate-fade-in-up opacity-100" : "opacity-0"
+      }`}
       style={{ animationDelay: `${index * 300}ms` }}
     >
-
       <div className="flex flex-col lg:flex-row gap-8">
-        {/* Image */}
-        <div className="flex-shrink-0 w-full lg:w-1/3 flex flex-row">
-          {thought.image && (
-            <div className="flex-shrink-0 w-full lg:w">
+        {/* Images Gallery */}
+        <div className="flex-shrink-0 w-full lg:w-1/3">
+          {/* Single Image (backward compatibility) */}
+          {thought.image && !thought.images && (
+            <div className="flex-shrink-0 w-full">
               <div className="relative rounded-xl overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-500 group">
                 <img
                   src={thought.image}
                   alt={thought.title}
                   className="thoughts-image object-contain object-center"
                 />
-                {/* Overlay để tăng độ tương phản */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-
-                {/* Caption overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
                   <p className="text-white font-medium text-sm text-center">
                     {thought.title}
                   </p>
                 </div>
-
-                {/* Hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           )}
-        </div>
 
+          {/* Multiple Images */}
+          {thought.images && thought.images.length > 0 && (
+            <div className="space-y-4">
+              {thought.images.map((imageData, imageIndex) => (
+                <div
+                  key={imageIndex}
+                  className="relative rounded-xl overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-500 group"
+                >
+                  <img
+                    src={imageData.src}
+                    alt={imageData.alt}
+                    className="thoughts-image object-contain object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
+                    <p className="text-white font-medium text-xs text-center">
+                      {imageData.title}
+                    </p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Icon */}
         <div className="flex-shrink-0 self-start lg:self-center">
@@ -173,12 +193,17 @@ const Thoughts = () => {
         {/* Section Header */}
         <div
           ref={titleRef}
-          className={`text-center mb-16 transition-all duration-800 ${titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-            }`}
+          className={`text-center mb-16 transition-all duration-800 ${
+            titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+          }`}
         >
-          <h2 className="section-title">Sứ Mệnh Lịch Sử Và Phương Hướng Xây Dựng Giai Cấp Công Nhân Việt Nam</h2>
+          <h2 className="section-title">
+            Sứ Mệnh Lịch Sử Và Phương Hướng Xây Dựng Giai Cấp Công Nhân Việt Nam
+          </h2>
           <p className="text-xl text-neutral-medium-gray max-w-2xl mx-auto">
-            Thể hiện vai trò tiên phong trên các lĩnh vực kinh tế, chính trị – xã hội, văn hóa – tư tưởng và định hướng phát triển trong thời kỳ mới
+            Thể hiện vai trò tiên phong trên các lĩnh vực kinh tế, chính trị –
+            xã hội, văn hóa – tư tưởng và định hướng phát triển trong thời kỳ
+            mới
           </p>
         </div>
 
