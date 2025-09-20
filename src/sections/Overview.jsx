@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { thoughtContent } from "../data/content";
+import VideoPlayer from "../components/VideoPlayer";
 
 const StatItem = ({ stat, index }) => {
   const [ref, inView] = useInView({
@@ -11,8 +12,9 @@ const StatItem = ({ stat, index }) => {
   return (
     <div
       ref={ref}
-      className={`text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-hover transition-all duration-500 ${inView ? "animate-fade-in-up opacity-100" : "opacity-0"
-        }`}
+      className={`text-center p-8 bg-white rounded-xl shadow-soft hover:shadow-soft-hover transition-all duration-500 ${
+        inView ? "animate-fade-in-up opacity-100" : "opacity-0"
+      }`}
       style={{ animationDelay: `${index * 200}ms` }}
     >
       <h4 className="text-5xl font-serif font-bold text-primary-red mb-2">
@@ -45,12 +47,14 @@ const Overview = () => {
         {/* Section Header */}
         <div
           ref={titleRef}
-          className={`text-center mb-16 transition-all duration-800 ${titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-            }`}
+          className={`text-center mb-16 transition-all duration-800 ${
+            titleInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+          }`}
         >
           <h2 className="section-title">Tổng Quan</h2>
           <p className="text-xl text-neutral-medium-gray max-w-2xl mx-auto">
-            Hệ thống nhận thức toàn diện và sâu sắc về giai cấp công nhân Việt Nam
+            Hệ thống nhận thức toàn diện và sâu sắc về giai cấp công nhân Việt
+            Nam
           </p>
         </div>
 
@@ -59,8 +63,9 @@ const Overview = () => {
           {/* Text Content */}
           <div
             ref={contentRef}
-            className={`mb-12 transition-all duration-800 ${contentInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-              }`}
+            className={`mb-12 transition-all duration-800 ${
+              contentInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+            }`}
           >
             <h3 className="text-3xl font-serif font-bold text-primary-red mb-6 text-center">
               {thoughtContent.overview.title}
@@ -71,24 +76,23 @@ const Overview = () => {
             </p>
           </div>
 
-          {/* YouTube Video iframe */}
-          <div className="mb-16 text-center relative" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              src="https://www.youtube.com/embed/-hr-F2GxvLs"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full rounded-xl center"
-            ></iframe>
-          </div>
+          {/* YouTube Videos */}
+          <VideoPlayer
+            videoId="-hr-F2GxvLs"
+            title="Video về giai cấp công nhân Việt Nam"
+          />
 
+          <VideoPlayer
+            videoId="dLsBPvi6RII?si=xnH9usiLz58PBj1J"
+            title="Vai trò lịch sử của giai cấp công nhân Việt Nam"
+          />
 
           {/* Image - Full Width */}
           <div
             ref={imageRef}
-            className={`transition-all duration-800 overview-image-container ${imageInView ? "animate-fade-in-up opacity-100" : "opacity-0"
-              }`}
+            className={`transition-all duration-800 overview-image-container ${
+              imageInView ? "animate-fade-in-up opacity-100" : "opacity-0"
+            }`}
           >
             <div className="relative rounded-xl overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-500 group w-full max-w-6xl mx-auto">
               <div className="overview-image relative w-full">
